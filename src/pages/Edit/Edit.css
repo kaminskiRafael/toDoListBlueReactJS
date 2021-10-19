@@ -1,0 +1,108 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+body {
+    background-color: #00f1f1;
+}
+
+.tudo{
+    background-color: #fff;
+    border: 20px solid #34526c;
+    border-radius: 15px;
+    width: 40%;
+    min-height: 20rem;
+    margin: 80px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.menu{
+    background-color: #fff;
+}
+
+.conteudo{
+    background-color: #fff;
+}
+
+input[type=checkbox]{
+    width: 50px;
+    height: 50px;
+}
+
+.card{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    margin: 0 10px;
+}
+
+.card p{
+    margin-left: 10px;
+}
+
+.rodape{
+    background-color: #fff;
+}
+
+.div-btn{
+    display: flex;
+    flex-direction: column;
+    width:100%;
+}
+
+.btn{
+    margin: 5px;
+    width:auto;
+}
+
+.btn-editar{
+    background-color: #007F11;
+    color: #fff;
+    text-decoration: none;
+}
+
+.btn-apagar{
+    margin-top: 2px;
+    margin-bottom: 2px;
+    background-color: #BB2D3B;
+    color: #fff;
+    outline-style: none;
+    border: none;
+}
+
+.div-descricao{
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+h5{
+    font-weight: bold;
+}
+
+.div-ok-check{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card a:hover{
+    color:#fff
+}
+
+.div-descricao{
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+}
+
+.div-titulo{
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+}

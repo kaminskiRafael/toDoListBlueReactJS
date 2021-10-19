@@ -1,0 +1,58 @@
+.tudo{
+    background-color: #fff;
+    border: 20px solid #34526c;
+    border-radius: 15px;
+    width: 40%;
+    min-height: 20rem;
+    margin: 80px auto;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+
+.div-ok{
+    display: flex;
+    padding: 10px;
+    text-align: center;
+    border-top: 2px solid #ccc;
+    align-items: center;
+}
+
+.div-ok-check{
+    padding-top: 3px;
+    display: flex;
+    text-align: center;
+}
+
+h1{
+    padding: 5px;
+}
+
+.div-ok-int{
+    width:100%;
+}
+
+.div-ok a{
+    color: #000;
+    text-decoration: none;  
+    text-align: center;
+}
+
+.div-ok h5
+.div-ok span{
+    display: flex;
+    justify-content: center;
+}
+
+.baixa{
+    background-color: #3dbd02;
+}
+
+.media{
+    background-color: #ffee00;
+}
+
+.alta{
+    background-color: #f00;
+}
