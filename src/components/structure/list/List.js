@@ -18,7 +18,8 @@ const List = () => {
 
     return(
         <>
-            <div class='tudo center'>
+            <div class='tudo'>
+            <div className='tudoview'>
             <h1>Lista de Tarefas</h1>
                 {
                     tarefas.map((tarefa, index) => (
@@ -32,6 +33,7 @@ const List = () => {
                         </div>
                     ))
                 }
+            </div>
             </div>
         </>
     )

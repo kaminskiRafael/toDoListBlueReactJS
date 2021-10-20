@@ -49,9 +49,9 @@ const Add = (props) => {
                             <div className='div-descricao'>
                                 <label name='Tarefa' htmlFor='prioridadeTarefa'>Prioridade</label>
                                 <select name='prioridadeTarefa' id='prioridadeTarefa'>
-                                    <option value='baixa'>Baixa</option>
-                                    <option value='media'>Média</option>
-                                    <option value='alta'>Alta</option>
+                                    <option value='Baixa'>Baixa</option>
+                                    <option value='Media'>Média</option>
+                                    <option value='Alta'>Alta</option>
                                 </select>
                             </div>
                             <div className='div-btn'>

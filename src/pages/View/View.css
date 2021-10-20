@@ -21,6 +21,11 @@ body {
     align-items: center;
 }
 
+.tudoview{
+    display: flex;
+    justify-content: stretch;
+}
+
 .menu{
     background-color: #fff;
 }
@@ -36,7 +41,7 @@ input[type=checkbox]{
 
 .card{
     display: flex;
-    align-items: center;
+    align-items: stretch;
     justify-content: space-between;
     padding: 5px;
     margin: 0 10px;
@@ -77,7 +82,8 @@ input[type=checkbox]{
     border: none;
 }
 
-.div-descricao{
+.div-descricao
+.div-prioridade{
     height: 100%;
     display: flex;
     align-items: center;
@@ -95,4 +101,22 @@ h5{
 
 .card a:hover{
     color:#fff
+}
+
+.baixa{
+    background-color: #3dbd02;
+    color: #fff;
+    padding: 10px;
+}
+
+.media{
+    background-color: #ffee00;
+    color: #fff;
+    padding: 10px;
+}
+
+.alta{
+    background-color: #f00;
+    color: #fff;
+    padding: 10px;
 }

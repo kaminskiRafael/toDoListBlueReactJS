@@ -9,6 +9,7 @@ const View = (props) => {
     const _id = props.match.params.id;
     const [tarefa, setTarefa] = useState({});
     const [open, setOpen] = useState(false);
+    let dataFormatada = 0;
 
     const onopenModal = () => setOpen(true);
     const onCloseModal = () => setOpen(false);
@@ -21,9 +22,8 @@ const View = (props) => {
             setTarefa(result);
         }
         getTarefaById();
+        
     }, [_id]);
-
-    
 
     const handleDelete = async (evento) => {
         evento.preventDefault();
@@ -33,9 +33,26 @@ const View = (props) => {
         props.history.push('/');
     }
 
+    let data = new Date(tarefa.dataCriacaoTarefa);
+
+
+    if(tarefa.prioridadeTarefa == 'baixa'){
+        document.querySelector('#prioridade').classList.add('baixa');
+        data.setDate(data.getDate() + 3); 
+        dataFormatada = (data.getDate()) + "/" + ((data.getMonth() + 1)) + "/" + data.getFullYear();
+    }else if(tarefa.prioridadeTarefa == 'media'){
+        document.querySelector('#prioridade').classList.add('media');
+        data.setDate(data.getDate() + 2); 
+        dataFormatada = (data.getDate()) + "/" + ((data.getMonth() + 1)) + "/" + data.getFullYear();
+    }else if(tarefa.prioridadeTarefa == 'alta'){        
+        document.querySelector('#prioridade').classList.add('alta');
+        data.setDate(data.getDate() + 1); 
+        dataFormatada = (data.getDate()) + "/" + ((data.getMonth() + 1)) + "/" + data.getFullYear();
+}
+
     return(
         <>
-            <div className="tudo">
+            <div className='tudo'>
                 <div className='card'>
                     <div className='div-titulo'>
                         <h3>{tarefa.nomeTarefa}</h3>
@@ -43,11 +60,11 @@ const View = (props) => {
                     <div className='div-descricao'>
                         <p>{tarefa.descricaoTarefa}</p>
                     </div>
-                    <div className='div-descricao'>
-                        <p>{tarefa.prioridadeTarefa}</p>
+                    <div className='div-prioridade'>
+                        <p className='' id='prioridade'>Prioridade: {tarefa.prioridadeTarefa}</p>
                     </div>
                     <div className='div-descricao'>
-                        <p>{tarefa.dataCriacaoTarefa}</p>
+                        <p>Prazo de Conclusão: {dataFormatada}</p>
                     </div>
                     <div className='div-btn'>
                         <Link to={`/Edit/${tarefa._id}`} className='btn-editar' type="button" value="Edit">Editar</Link>
@@ -57,8 +74,8 @@ const View = (props) => {
                 </div>
                 <Modal open={open} onClose={onCloseModal} center>
                     <h2>Deseja realmente Excluir</h2>
-                        <button className="btn btn-danger" onClick={onCloseModal}>Não</button>
-                        <button className="btn btn-success" onClick={handleDelete}>Sim</button>
+                        <button className='btn btn-danger' onClick={onCloseModal}>Não</button>
+                        <button className='btn btn-success' onClick={handleDelete}>Sim</button>
                 </Modal>
             </div>
         </>
