@@ -36,15 +36,15 @@ const View = (props) => {
     let data = new Date(tarefa.dataCriacaoTarefa);
 
 
-    if(tarefa.prioridadeTarefa == 'baixa'){
+    if(tarefa.prioridadeTarefa == 'baixa' || 'Baixa'){
         document.querySelector('#prioridade').classList.add('baixa');
         data.setDate(data.getDate() + 3); 
         dataFormatada = (data.getDate()) + "/" + ((data.getMonth() + 1)) + "/" + data.getFullYear();
-    }else if(tarefa.prioridadeTarefa == 'media'){
+    }else if(tarefa.prioridadeTarefa == 'media' || 'Media'){
         document.querySelector('#prioridade').classList.add('media');
         data.setDate(data.getDate() + 2); 
         dataFormatada = (data.getDate()) + "/" + ((data.getMonth() + 1)) + "/" + data.getFullYear();
-    }else if(tarefa.prioridadeTarefa == 'alta'){        
+    }else if(tarefa.prioridadeTarefa == 'alta' || 'Alta'){        
         document.querySelector('#prioridade').classList.add('alta');
         data.setDate(data.getDate() + 1); 
         dataFormatada = (data.getDate()) + "/" + ((data.getMonth() + 1)) + "/" + data.getFullYear();
